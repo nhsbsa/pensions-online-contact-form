@@ -1,0 +1,115 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Additional Pension Calculator
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+</br>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-phase-banner no-border">
+          <p class="nhsuk-phase-banner__content">
+            <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+              Beta
+            </strong>
+            <span class="nhsuk-phase-banner__text">
+              This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
+            </span>
+          </p>
+        </div>              
+      </div>
+    </div>
+
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+        <form action="start" method="post">
+
+      <!-- Change the page heading -->
+      <h1>
+        Additional Pension Calculator
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p>Use this service to calculate your additional pension.</p>
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>This service is only for active contributing members of the 2015 Pension scheme.</p>
+      </div>
+
+      <p>If your birthday is in the next 6 weeks, we advise you do the calculation and send it to your employer after your birthday.</p>
+      
+      <h3>
+        Before you start
+      </h3>
+
+      <p>
+        We'll ask you:
+      </p>
+
+      <ul>
+        <li>
+        for your date of birth
+        </li>
+        <li>
+        for any previous additional pension contracts you may have
+        </li>
+        <li>
+        how much additional pension you would like
+        </li>
+        <li>
+        if you would like dependant cover
+        </li>
+        <li>
+        how your additional pension will be purchased
+        </li>
+      </ul>
+
+      <p>Make sure you read the <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2023-11/Added%20Benefits-Additional%20Pension%20factsheet-20231020.pdf" target="_blank">additional pension factsheet</a> before you complete the form.</p>
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Start
+      </button>
+
+      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+        Page last reviewed: 23 May 2024<br>
+      </p>
+
+      <!-- End of content -->
+   
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}

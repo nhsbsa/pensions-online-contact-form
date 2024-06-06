@@ -1,0 +1,313 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Additional Pension Calculator
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+</br>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-phase-banner no-border">
+      <p class="nhsuk-phase-banner__content">
+        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+          Beta
+        </strong>
+        <span class="nhsuk-phase-banner__text">
+          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
+        </span>
+      </p>
+    </div>              
+  </div>
+</div>
+
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="javascript:history.back()">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+</svg>
+      Go back
+  </a>
+</div>
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <form action="result" method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+
+      
+      <div class="nhsuk-form-group">
+
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h2 class="nhsuk-fieldset__heading">
+            Here is your calculation result based on your answers
+          </h2>
+        </legend>
+
+        <div class="nhsuk-hint" id="contact-hint">
+          You can change your answers to affect your calculation result.
+        </div>
+
+        <dl class="nhsuk-summary-list">
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              27 April 1986
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="date-of-birth">
+                Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Previous additional pension contract?
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Yes
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="previous-contracts">
+                Change<span class="nhsuk-u-visually-hidden"> previous additional pension contract?</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Previous contract amount?
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              £1000
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="previous-contracts-amount">
+                Change<span class="nhsuk-u-visually-hidden"> Previous contract amount?</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              How much additional pension?
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <p>£2000</p>
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="additional-pension-amount">
+                Change<span class="nhsuk-u-visually-hidden"> how much additional pension?</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Dependant cover?
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <p>Yes</p>
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="dependant-cover">
+                Change<span class="nhsuk-u-visually-hidden"> Dependant cover?</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              How would you like to pay?
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <p>Instalments</p>
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="payment-option">
+                Change<span class="nhsuk-u-visually-hidden"> How would you like to pay?</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              How many instalments?
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              <p>10</p>
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="instalments">
+                Change<span class="nhsuk-u-visually-hidden"> How many instalments?</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+        </dl>
+
+      
+    
+    </div>
+
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          <h1 class="nhsuk-fieldset__heading">
+            Calculation result
+          </h1>
+        </legend>
+
+          <div class="nhsuk-hint" id="contact-hint">
+            The cost of your additional pension is dependant on your age. Therefore this quotation is only valid until your next birthday.
+          </div>
+
+          <dl class="nhsuk-summary-list">
+
+						<div class="nhsuk-summary-list__row">
+							<dt class="nhsuk-summary-list__key">Monthly payment</dt>
+							<dd class="nhsuk-summary-list__value">£242.40</dd>
+
+						</div>
+
+						<div class="nhsuk-summary-list__row">
+							<dt class="nhsuk-summary-list__key">Annual amount</dt>
+							<dd class="nhsuk-summary-list__value">£2,908.80</dd>
+
+						</div>
+
+						<div class="nhsuk-summary-list__row">
+							<dt class="nhsuk-summary-list__key">Total amount</dt>
+							<dd class="nhsuk-summary-list__value">£29,088.00</dd>
+
+						</div>
+
+					</dl>
+
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h2 class="nhsuk-fieldset__heading">
+              Next steps
+            </h2>
+          </legend>
+
+  <!--<p>1. Read through the <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2023-11/Added%20Benefits-Additional%20Pension%20factsheet-20231020.pdf" target="_blank">additional pension factsheet</a> before you complete the form.</p>
+  <p>2. Print out, fill in and send your form to your employer within 6 weeks of the calculation date.</p>
+  <p>Another calculation will be needed if:</p>
+  <ul>
+    <li>the form is not sent within 6 weeks</li>
+    <li>you have a birthday between making a calculation and sending your form</li>
+  </ul>-->
+
+
+  <div class="nhsuk-do-dont-list">
+    <h3 class="nhsuk-do-dont-list__label">Do</h3>
+    <ul class="nhsuk-list nhsuk-list--tick" role="list">
+      <li>
+        <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+          <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+        </svg>
+        read through the <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2023-11/Added%20Benefits-Additional%20Pension%20factsheet-20231020.pdf" target="_blank">additional pension factsheet</a> before you complete the form
+      </li>
+      <li>
+        <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+          <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+        </svg>
+        print out, fill in and send the form to your employer within 6 weeks of the calculation date
+      </li>
+    </ul>
+  </div>
+  
+  <div class="nhsuk-do-dont-list">
+    <h3 class="nhsuk-do-dont-list__label">Don&#39;t</h3>
+    <ul class="nhsuk-list nhsuk-list--cross" role="list">
+      <li>
+        <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+          <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+          <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+        </svg>
+        do not send the form after 6 weeks of the calculation date
+      </li>
+      <li>
+        <svg class="nhsuk-icon nhsuk-icon__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+          <path d="M17 18.5c-.4 0-.8-.1-1.1-.4l-10-10c-.6-.6-.6-1.6 0-2.1.6-.6 1.5-.6 2.1 0l10 10c.6.6.6 1.5 0 2.1-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+          <path d="M7 18.5c-.4 0-.8-.1-1.1-.4-.6-.6-.6-1.5 0-2.1l10-10c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2.1l-10 10c-.3.3-.6.4-1 .4z" fill="#d5281b"></path>
+        </svg>
+        do not send the form if you have a birthday within the next 6 weeks
+      </li>
+    </ul>
+  </div>
+
+  <p>Your NHS employer will complete their part of the form and forward your application to NHS Pensions.</p>
+  <p>We aim to respond within 4 weeks.</p>
+
+          <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Print your form
+          </button>
+
+          <!--<p><a href="AP1 Form.pdf" target="_blank">AP1 Form</a></p>-->
+
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}

@@ -15,10 +15,5 @@ router.post(/start/, (req, res) => {
     res.redirect('date-of-birth')
 });
 
-// What is your date of birth?
-router.post(/date-of-birth/, (req, res) => {
-    res.redirect('previous-contracts')
-});
-
 
 module.exports = router;

@@ -1,0 +1,97 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-phase-banner no-border">
+      <p class="nhsuk-phase-banner__content">
+        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+          Beta
+        </strong>
+        <span class="nhsuk-phase-banner__text">
+          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
+        </span>
+      </p>
+    </div>              
+  </div>
+</div>
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+  <div class="nhsuk-grid-row">
+
+ 
+      <form action="previous-contracts" method="post">
+
+      <!-- Add content here -->
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know that a NHS pension member has died</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Was the deceased member still in active employment?
+            </h1>
+          </legend>
+
+         
+      
+          <div class="nhsuk-radios">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-yes" name="#" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-yes">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contract-no" name="contract" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="contract-no">
+                No
+              </label>
+            </div>
+      
+          </div>
+        </fieldset>
+      
+      </div>
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}

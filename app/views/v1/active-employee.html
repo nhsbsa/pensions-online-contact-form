@@ -23,6 +23,7 @@
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 </br>
+
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <div class="nhsuk-phase-banner no-border">
@@ -44,54 +45,62 @@
     "text": "Go back"
   }) }}
 
-  <div class="nhsuk-grid-row">
 
- 
-      <form action="previous-contracts" method="post">
+        <form method=“post”>
 
-      <!-- Add content here -->
-      <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know that a NHS pension member has died</span>
+                Was the deceased member still in active employment?
+              </h1>
+            </legend>
+            
+             
 
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know that a NHS pension member has died</span>
-            <h1 class="nhsuk-fieldset__heading">
-              Was the deceased member still in active employment?
-            </h1>
-          </legend>
+            <div class="nhsuk-form-group">
+              <div class="nhsuk-radios">
 
-         
-      
-          <div class="nhsuk-radios">
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="contract-yes" name="#" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="contract-yes">
-                Yes
-              </label>
-            </div>
-      
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="contract-no" name="contract" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="contract-no">
-                No
-              </label>
-            </div>
-      
-          </div>
-        </fieldset>
-      
+               
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="contact-employment-authority" name="example" type="radio"
+                    value="contact-employment-authority" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-employment-authority">
+                   Yes
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="your-interview-slots" name="example" type="radio"
+                    value="check-your-answers" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="confirmation-time-36">
+                    No
+                  </label>
+                </div>
+
+                
+
+              </div>
+          </fieldset>
+          
+          <button class="nhsuk-button" type="submit">
+            Save and continue
+          </button>
       </div>
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-     
 
-      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-        Continue
-      </button>
 
-      <!-- End of content -->
+    </div>
+   
+
     </form>
-    </div>  
-
   </div>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
 {% endblock %}
+

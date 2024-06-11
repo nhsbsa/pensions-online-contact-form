@@ -1,0 +1,93 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-phase-banner no-border">
+      <p class="nhsuk-phase-banner__content">
+        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+          Beta
+        </strong>
+        <span class="nhsuk-phase-banner__text">
+          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
+        </span>
+      </p>
+    </div>              
+  </div>
+</div>
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+        <form method=“post”>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+                What is your address?
+              </h1>
+              
+        
+      <span class="nhsuk-hint">
+
+    </span>
+
+      <form action="#" method="post">
+
+        <p>For example, AB1 2CD</p>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-width-10">
+              Postcode 
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+          </div>
+
+
+          <div class="nhsuk-form-group">
+            <button class="nhsuk-button" type="submit">
+              Find address
+            </button>
+            </div>
+
+          </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    function setLocation(element) {
+            document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

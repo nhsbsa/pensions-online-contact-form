@@ -24,26 +24,13 @@
 {% block outerContent %}
 </br>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-phase-banner no-border">
-      <p class="nhsuk-phase-banner__content">
-        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-          Beta
-        </strong>
-        <span class="nhsuk-phase-banner__text">
-          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>              
-  </div>
-</div>
+
  
  
- {{ backLink({
-    "href": "javascript:history.go(-1)",
-    "text": "Go back"
-  }) }}
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
 
 
         <form method=“post”>
@@ -51,8 +38,8 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
-                <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
-                What is your address?
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Deceased pension member details</span>
+                What was the postcode of the deceased?
               </h1>
               
         
@@ -60,7 +47,7 @@
 
     </span>
 
-      <form action="#" method="post">
+      <form action="deceased-address-select" method="post">
 
         <p>For example, AB1 2CD</p>
 
@@ -68,20 +55,29 @@
             <label class="nhsuk-label" for="input-width-10">
               Postcode 
             </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" type="text">
           </div>
+          
+          <p class="nhsuk-body"><a href="deceased-full-address">
+            Enter address manually
+          </a></p>
+         
 
 
           <div class="nhsuk-form-group">
-            <button class="nhsuk-button" type="submit">
-              Find address
-            </button>
+            {{ button({
+              "href": "deceased-address-select",
+              "text": "Find address"
+              }) }} 
+
             </div>
 
           </div>
 
       </form>
+      
     </div>
+
   </div>
 
 

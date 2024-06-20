@@ -14,3 +14,31 @@
       padding-top: 24px; 
     } 
   }
+
+// ************************************
+// phase banner
+// ************************************
+ 
+.nhsuk-phase-banner {
+  padding-top: nhsuk-spacing(2);
+  padding-bottom: nhsuk-spacing(2);
+  border-bottom: 1px solid $nhsuk-border-color;
+  background-color: white
+}
+ 
+.nhsuk-phase-banner__content {
+  @include nhsuk-font(16);
+  color: $nhsuk-text-color;
+  display: table;
+  margin: 0;
+}
+ 
+.nhsuk-phase-banner__content__tag {
+  margin-right: 10px ;
+}
+ 
+.nhsuk-phase-banner__text {
+  display: table-cell;
+  vertical-align: middle;
+}
+

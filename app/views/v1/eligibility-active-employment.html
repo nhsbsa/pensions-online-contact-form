@@ -24,20 +24,7 @@
 {% block outerContent %}
 </br>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-phase-banner no-border">
-      <p class="nhsuk-phase-banner__content">
-        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-          Beta
-        </strong>
-        <span class="nhsuk-phase-banner__text">
-          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>              
-  </div>
-</div>
+
  
  
  {{ backLink({
@@ -51,11 +38,12 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
-                <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know that a NHS pension member has died</span>
-                Was the deceased member receiving their pension payments? </h1>
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know a NHS pension member has died</span>
+                Was the deceased member still in active employment?
+              </h1>
             </legend>
             
-             <p>This is to make sure we don't overpay the deceased member's pension.</p>
+             
 
             <div class="nhsuk-form-group">
               <div class="nhsuk-radios">
@@ -63,28 +51,21 @@
                
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="#" onclick="setLocation(this);">
-                  <label class="nhsuk-label nhsuk-radios__label" for="#">
+                  <input class="nhsuk-radios__input" id="eligibility-contact-employer" name="example" type="radio"
+                    value="eligibility-contact-employer" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="eligibility-contact-employer">
                    Yes
                   </label>
                 </div>
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="#" onclick="setLocation(this);">
-                  <label class="nhsuk-label nhsuk-radios__label" for="#">
+                  <input class="nhsuk-radios__input" id="your-interview-slots" name="example" type="radio"
+                    value="eligibility-recieving-pension" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="confirmation-time-36">
                     No
                   </label>
                 </div>
 
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="#" onclick="setLocation(this);">
-                  <label class="nhsuk-label nhsuk-radios__label" for="#">
-                    Not sure
-                  </label>
-                </div>
                 
 
               </div>

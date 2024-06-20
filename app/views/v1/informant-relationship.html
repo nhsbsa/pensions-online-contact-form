@@ -23,24 +23,11 @@
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 </br>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-phase-banner no-border">
-      <p class="nhsuk-phase-banner__content">
-        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-          Beta
-        </strong>
-        <span class="nhsuk-phase-banner__text">
-          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>              
-  </div>
-</div>
+
  
  
  {{ backLink({
-    "href": "name-question",
+    "href": "informant-name",
     "text": "Go back"
   }) }}
 
@@ -48,7 +35,7 @@
 
     <div class="nhsuk-grid-column-full">
 
-      <form action="email-address-question" method="post">
+      <form action="informant-email-address" method="post">
 
       <!-- Change the page heading -->
 
@@ -64,13 +51,14 @@
               What is your relationship to the deceased?</h1>
           </legend>
 
-        
+        <p>This information will help us as we handle the deceased members benefits.</p>
         
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="relationship">
               Relationship
             </label>
             <select class="nhsuk-select nhsuk-u-width-one-half" id="one-half" name="one-half">
+              <option value="0"></option>
               <option value="1">Spouse</option>
               <option value="2">Father </option>
               <option value="3">Mother</option>

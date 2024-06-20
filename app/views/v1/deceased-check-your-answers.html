@@ -24,46 +24,20 @@
 {% block outerContent %}
 </br>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-phase-banner no-border">
-      <p class="nhsuk-phase-banner__content">
-        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-          Beta
-        </strong>
-        <span class="nhsuk-phase-banner__text">
-          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>              
-  </div>
-</div>
+
  
-
-
-<style>
-
-
-
-
-.nhsuk-hint-white {
-  color: white
-}
-
-.nhsuk-details__summary {
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    padding-left: 24px;
-    position: relative;
-}
-</style>
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
 
 <div class="nhsuk-grid-row">
 
     <div class="nhsuk-grid-column-full">
-      <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
-        <h1 class="nhsuk-heading-l">Review your details</h1>
+      <form action="declaration" method="post">
+      <span class="nhsuk-caption-l nhsuk-caption--bottom">Deceased pension member details</span>
+        <h1 class="nhsuk-heading-l">Review deceased pension member details</h1>
 
 <p>Check your answers and make sure they are correct before you continue. If you need to, you can change your answers.</p>
 
@@ -76,65 +50,48 @@
     Name
   </dt>
   <dd class="nhsuk-summary-list__value">
-    Chris Armstrong
+    Mrs Mia Bloggs
   </dd>
 
   <dd class="nhsuk-summary-list__actions">
 
-    <a href="account-name">
+    <a href="deceased-name">
       Change<span class="nhsuk-u-visually-hidden">&nbsp; name. </span>
     </a>
 
   </dd>
 
 </div>
-<!--
+
 <div class="nhsuk-summary-list__row">
   <dt class="nhsuk-summary-list__key">
-    Pronoun
+    SD Number
   </dt>
   <dd class="nhsuk-summary-list__value">
-
+    SD12345678
   </dd>
 
   <dd class="nhsuk-summary-list__actions">
 
-    <a href="account-pronoun">
-      Change<span class="nhsuk-u-visually-hidden"> pronoun</span>
+    <a href="deceased-pension-number">
+      Change<span class="nhsuk-u-visually-hidden">&nbsp; name. </span>
     </a>
 
   </dd>
 
 </div>
--->
 
 <div class="nhsuk-summary-list__row">
   <dt class="nhsuk-summary-list__key">
-    Email address
+  Date of birth
   </dt>
   <dd class="nhsuk-summary-list__value">
-    chris.armstrong@gmail.com
+    31 March 1940
   </dd>
 
   <dd class="nhsuk-summary-list__actions">
 
-    
-
-  </dd>
-
-</div>
-
-<div class="nhsuk-summary-list__row">
-  <dt class="nhsuk-summary-list__key">
-  How do you want to be contacted?
-  </dt>
-  <dd class="nhsuk-summary-list__value">
-    Email and phone
-  </dd>
-
-  <dd class="nhsuk-summary-list__actions">
-
-    <a href="account-contact">
+    <a href="deceased-date-of-birth">
       Change<span class="nhsuk-u-visually-hidden">&nbsp; contact preferences.</span>
     </a>
 
@@ -144,16 +101,16 @@
 
 <div class="nhsuk-summary-list__row">
   <dt class="nhsuk-summary-list__key">
-  Phone number
+  Date of death
   </dt>
   <dd class="nhsuk-summary-list__value">
-    0779 2856 505
+    20 June 2024
   </dd>
 
   <dd class="nhsuk-summary-list__actions">
 
-    <a href="account-phone">
-      Change<span class="nhsuk-u-visually-hidden">&nbsp; telephone.</span>
+    <a href="deceased-date-of-death">
+      Change<span class="nhsuk-u-visually-hidden">&nbsp; contact preferences.</span>
     </a>
 
   </dd>
@@ -162,79 +119,70 @@
 
 <div class="nhsuk-summary-list__row">
   <dt class="nhsuk-summary-list__key">
-    Password
+    Dependants
   </dt>
   <dd class="nhsuk-summary-list__value">
-    ******
+    Child Dependant, Adult Dependant
   </dd>
 
   <dd class="nhsuk-summary-list__actions">
 
-    <a href="account-existingpassword">
+    <a href="deceased-dependants">
       Change<span class="nhsuk-u-visually-hidden">&nbsp; password.</span>
     </a>
 
   </dd>
 
 </div>
-<!--
+
+<div class="nhsuk-summary-list__row">
+  <dt class="nhsuk-summary-list__key">
+    Main residence in the UK?
+  </dt>
+  <dd class="nhsuk-summary-list__value">
+    Yes
+  </dd>
+
+  <dd class="nhsuk-summary-list__actions">
+
+    <a href="deceased-uk-main-residence">
+      Change<span class="nhsuk-u-visually-hidden">&nbsp; password.</span>
+    </a>
+
+  </dd>
+
+</div>
+
 <div class="nhsuk-summary-list__row">
   <dt class="nhsuk-summary-list__key">
     Address
   </dt>
   <dd class="nhsuk-summary-list__value">
-
+    <p>10 Downing Street</p>
+    <p>London</p>
+    <p>SW1A 2AA</p>
   </dd>
 
   <dd class="nhsuk-summary-list__actions">
 
-    <a href="account-address">
-      Change<span class="nhsuk-u-visually-hidden"> password</span>
+    <a href="deceased-postcode-lookup">
+      Change<span class="nhsuk-u-visually-hidden">&nbsp; password.</span>
     </a>
 
   </dd>
 
 </div>
--->
-
-
-<!-- <div class="nhsuk-summary-list__row">
-  <dt class="nhsuk-summary-list__key">
-    Language
-  </dt>
-  <dd class="nhsuk-summary-list__value">
-    English
-  </dd>
-
-  <dd class="nhsuk-summary-list__actions">
-
-    <a href="account-language">
-      Change<span class="nhsuk-u-visually-hidden"> language</span>
-    </a>
-
-  </dd>
-
-</div>-->
-
-</dl>
 
 
 
-
-    </div>
 </div>
 
 
+</div>
 
-
-
-<style>
-
-
-
-
-</style>
-
+<button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+  Continue
+</button>
 <script src="/public/javascripts/navigation.js"></script>
-
+</form>
 {% endblock %}

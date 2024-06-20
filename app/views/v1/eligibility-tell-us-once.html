@@ -24,20 +24,7 @@
 {% block outerContent %}
 </br>
 
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-phase-banner no-border">
-      <p class="nhsuk-phase-banner__content">
-        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-          Beta
-        </strong>
-        <span class="nhsuk-phase-banner__text">
-          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>              
-  </div>
-</div>
+
  
  
  {{ backLink({
@@ -51,23 +38,20 @@
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
-                <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know that a NHS pension member has died</span>
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know a NHS pension member has died</span>
                 Have you used the 'Tell Us Once' service to notify about this bereavement? </h1>
             </legend>
-            
-           
 
              <p class="nhsuk-body">Tell Us Once is a service that lets you report a bereavement to most government organisations in one go.</p>
-              <p>A registrar will explain the service when you register the death of the deceased member.
-               </p>
 
+              <p>A registrar will explain the service when you register the death of the deceased.</p>
+
+               <p>They'll either:</p>
      <ul class="nhsuk-list nhsuk-list--bullet">
-      They will either:
 
             <li>complete the Tell Us Once service with you</li>
             <li>give you a unique reference number so you can use the service yourself online or by phone</li>
-            
-            
+                
         </ul>
             <div class="nhsuk-form-group">
               <div class="nhsuk-radios">
@@ -76,7 +60,7 @@
 
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="#" onclick="setLocation(this);">
+                    value="eligibility-tell-us-once-reference" onclick="setLocation(this);">
                   <label class="nhsuk-label nhsuk-radios__label" for="#">
                    Yes
                   </label>
@@ -84,7 +68,7 @@
 
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="#" onclick="setLocation(this);">
+                    value="informant-name" onclick="setLocation(this);">
                   <label class="nhsuk-label nhsuk-radios__label" for="#">
                     No
                   </label>
@@ -92,7 +76,7 @@
 
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="#" onclick="setLocation(this);">
+                    value="informant-name" onclick="setLocation(this);">
                   <label class="nhsuk-label nhsuk-radios__label" for="#">
                     Not sure
                   </label>

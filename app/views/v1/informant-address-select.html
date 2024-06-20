@@ -23,32 +23,19 @@
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 </br>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-phase-banner no-border">
-      <p class="nhsuk-phase-banner__content">
-        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-          Beta
-        </strong>
-        <span class="nhsuk-phase-banner__text">
-          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>              
-  </div>
-</div>
+
  
  
- {{ backLink({
-    "href": "#",
-    "text": "Go back"
-  }) }}
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
 
   <div class="nhsuk-grid-row">
 
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="#" method="post">
+      <form action="informant-check-your-answers" method="post">
 
       <!-- Change the page heading -->
 
@@ -79,7 +66,7 @@
           
               <dd class="nhsuk-summary-list__actions">
           
-                <a href="#">
+                <a href="informant-postcode-lookup">
                   Change<span class="nhsuk-u-visually-hidden"> name</span>
                 </a>
           
@@ -96,7 +83,7 @@
             <label class="nhsuk-label" for="relationship">
               Select your address
             </label>
-            <select class="nhsuk-select nhsuk-u-width-two-third" id="two-third" name="two-third">
+            <select class="nhsuk-select nhsuk-u-width-full" id="two-thirds" name="two-thirds">
               <option value="1">Address 1</option>
               <option value="2">Address 2</option>
               <option value="3">Address 3</option>

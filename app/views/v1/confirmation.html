@@ -1,0 +1,84 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+        <form method=“post”>
+
+          <div class="nhsuk-panel nhsuk-panel--confirmation" style="background-color:#005eb8; color:white; text-align:center; padding: 40px; margin-bottom:40px">
+            <h1 class="nhsuk-panel__title nhsuk-u-margin-bottom-4">
+              Notification of death has been sent
+            </h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Your reference number<br><strong>HDJ2123F</strong></p>
+          </div>
+
+          <p>You've successfully submitted a notification that a pension member has died.</p>
+
+          <p>We've sent you an email to confirm this.</p>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                What happens next
+              </h1>
+            </legend>
+            
+             <p>We'll review your notification within the next 4 weeks and respond to you.</p>
+
+          </fieldset>
+          
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Get help with your notification
+              </h1>
+            </legend>
+
+            <p>If you have any more questions before we respond, you can <a class="nhsuk-link" href="#">contact us</a>.</p>
+
+            <p><a class="nhsuk-link" href="#">What did you think of this service?</a> (Survey will take 30 seconds)</p>
+
+          </fieldset>
+
+    </div>
+   
+
+    </form>
+  </div>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

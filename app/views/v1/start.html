@@ -22,67 +22,59 @@
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
-
 </br>
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
-        <div class="nhsuk-phase-banner no-border">
-          <p class="nhsuk-phase-banner__content">
-            <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-              Beta
-            </strong>
-            <span class="nhsuk-phase-banner__text">
-              This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
-            </span>
-          </p>
-        </div>              
-      </div>
-    </div>
 
-{% endblock %}
-
-<!-- For adding page content -->
-<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
-{% block content %}
-
-
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
 
   <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+            
+    
 
-    <div class="nhsuk-grid-column-full">
 
-        <form action="start" method="post">
+            
+                
+          <h1 class="nhsuk-heading-l">
+        
+          
+            Letting us know a NHS pension member has died
+          </h1>
 
-      <!-- Change the page heading -->
-      <h1>
-        Title
-      </h1>
+     <p class="nhsuk-body">Use this service to let us know a pension member has died. </p>
+<h3>Before you start</h3>
 
-      <!-- Add content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+<p>We'll need to know your:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+    
+            <li>name</li>
+            <li>relationship to the deceased member</li>
+            <li>contact details</li>
+            
+        </ul>
 
-      <p>Body Text</p>
+<p>It’ll also help us match our records if you can tell us the deceased member’s:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+    
+            <li>pension number</li>
+            <li>date of birth</li>
+            <li>address</li>
+            
+        </ul>
 
-      <h3>
-        Sub-heading
-      </h3>
+        <p>We’ll send you an email to confirm we have your notification.</p>
+              
+                {{ button({
+                    "href": "eligibility-active-employment",
+                    "text": "Start"
+                    }) }} 
+                    
 
-      <p>
-        Body Text
-      </p>
-
-      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-        Start
-      </button>
-
-      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
-        Page last reviewed: 7th June 2024<br>
-      </p>
-
-      <!-- End of content -->
-   
-    </form>
-    </div>  
-
-  </div>
+            </form>
+        </div>
+    </div>
 {% endblock %}

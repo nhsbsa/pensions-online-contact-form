@@ -23,33 +23,19 @@
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 </br>
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="nhsuk-phase-banner no-border">
-      <p class="nhsuk-phase-banner__content">
-        <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
-          Beta
-        </strong>
-        <span class="nhsuk-phase-banner__text">
-          This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>              
-  </div>
-</div>
+
  
  
  {{ backLink({
-    "href": "relationship-question",
+    "href": "javascript:history.go(-1)",
     "text": "Go back"
   }) }}
 
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
 
     <div class="nhsuk-grid-column-full">
 
-      <form action="phone-number-q" method="post">
+      <form action="deceased-pension-number" method="post">
 
       <!-- Change the page heading -->
 
@@ -60,17 +46,29 @@
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
-            <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Deceased pension member details</span>
             <h1 class="nhsuk-fieldset__heading">
-              What is your email address?</h1>
+              What is the deceased members name? </h1>
           </legend>
 
-        <p>If you have an email address, it will give us a quick and easy way to update you once we've received your form.</p>
-        
-          
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="additional-pension-value">
+              Title
+            </label>
+            <select class="nhsuk-select" id="additional-pension-value" name="additional-pension-value">
+              <option value="0"></option>
+              <option value="1">Mr</option>
+              <option value="2">Mrs</option>
+              <option value="3">Ms</option>
+              <option value="4">Lady</option>
+              <option value="5">Lord</option>
+              <option value="6">Dr</option>
+            
+            </select>
+          </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="two-thirds">
-              Email address
+              Full name
             </label>
             <input class="nhsuk-input nhsuk-u-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
           </div>
@@ -84,6 +82,6 @@
       <!-- End of content -->
     </form>
     </div>  
-</div>
+
   </div>
 {% endblock %}

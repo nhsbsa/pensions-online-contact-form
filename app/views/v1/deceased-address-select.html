@@ -1,0 +1,110 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+ 
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="deceased-check-your-answers" method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Deceased pension member details</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Select an address</h1>
+          </legend>
+          
+         
+          
+
+          <dl class="nhsuk-summary-list">
+
+            <div class="nhsuk-summary-list__row">
+              <dt class="nhsuk-summary-list__key">
+               Post code
+              </dt>
+              <dd class="nhsuk-summary-list__value">
+                AB1 2CD
+              </dd>
+          
+              <dd class="nhsuk-summary-list__actions">
+          
+                <a href="deceased-postcode-lookup">
+                  Change<span class="nhsuk-u-visually-hidden"> name</span>
+                </a>
+          
+              </dd>
+          
+            </div>
+          
+
+       
+         
+    <br>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="relationship">
+              Select an address
+            </label>
+            <select class="nhsuk-select nhsuk-u-width-full" id="two-thirds" name="two-thirds">
+              <option value="1">Address 1</option>
+              <option value="2">Address 2</option>
+              <option value="3">Address 3</option>
+              <option value="4">Address 4</option>
+              <option value="5">Address 5</option>
+              <option value="6">Address 6</option>
+            
+            </select>
+          </div>
+          
+          
+        </fieldset>
+      
+      </div>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}

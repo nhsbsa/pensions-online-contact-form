@@ -1,0 +1,99 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+        <form method=“post”>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know a NHS pension member has died</span>
+                Was the deceased receiving their pension payments?</h1>
+            </legend>
+            
+             <p>We need this information so we do not overpay the deceased member's pension.</p>
+
+            <div class="nhsuk-form-group">
+              <div class="nhsuk-radios">
+
+               
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
+                    value="eligibility-tell-us-once" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="#">
+                   Yes
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
+                    value="eligibility-tell-us-once" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="#">
+                    No
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
+                    value="eligibility-tell-us-once" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="#">
+                    Not sure
+                  </label>
+                </div>
+                
+
+              </div>
+          </fieldset>
+          
+          <button class="nhsuk-button" type="submit">
+            Save and continue
+          </button>
+      </div>
+
+
+    </div>
+   
+
+    </form>
+  </div>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

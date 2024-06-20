@@ -7500,3 +7500,41 @@ b {
     padding-top: 24px;
   }
 }
+.nhsuk-phase-banner {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d8dde0;
+  background-color: white;
+}
+
+.nhsuk-phase-banner__content {
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  color: #212b32;
+  display: table;
+  margin: 0;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-phase-banner__content {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+@media print {
+  .nhsuk-phase-banner__content {
+    font-size: 14pt;
+    line-height: 1.2;
+  }
+}
+
+.nhsuk-phase-banner__content__tag {
+  margin-right: 10px;
+}
+
+.nhsuk-phase-banner__text {
+  display: table-cell;
+  vertical-align: middle;
+}

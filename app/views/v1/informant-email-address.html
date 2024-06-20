@@ -53,12 +53,20 @@
         <p>Giving us an email address will help us update you quickly once we've received your form.</p>
         
           
+
+        
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="two-thirds">
               Email address
             </label>
-            <input class="nhsuk-input nhsuk-u-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+            <input class="nhsuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
           </div>
+
+          <div class="nhsuk-inset-text" style="overflow:hidden;" id="validEmail">
+            <span class="nhsuk-hint nhsuk-!-margin-bottom-0">
+                An email will be sent to: &nbsp;<span class="nhsuk-body email-feedback" id="email-show" style="font-weight:800"></span>
+            </span>
+        </div>
         </fieldset>
       
       </div>

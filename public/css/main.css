@@ -7500,11 +7500,30 @@ b {
     padding-top: 24px;
   }
 }
+.beta-banner {
+  padding: 16px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.status-box {
+  padding: 3px 5px 3px 5px;
+  background-color: #007f3b;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.45455;
+  font-weight: bold;
+}
+
+.status-box.status-box-blue {
+  background-color: #005eb8;
+}
+
 .nhsuk-phase-banner {
   padding-top: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid #d8dde0;
-  background-color: white;
 }
 
 .nhsuk-phase-banner__content {

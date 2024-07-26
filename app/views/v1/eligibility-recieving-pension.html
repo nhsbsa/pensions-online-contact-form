@@ -50,24 +50,21 @@
                
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="eligibility-tell-us-once" onclick="setLocation(this);">
+                  <input class="nhsuk-radios__input" id="#" name="example" type="radio">
                   <label class="nhsuk-label nhsuk-radios__label" for="#">
                    Yes
                   </label>
                 </div>
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="eligibility-tell-us-once" onclick="setLocation(this);">
+                  <input class="nhsuk-radios__input" id="#" name="example" type="radio">
                   <label class="nhsuk-label nhsuk-radios__label" for="#">
                     No
                   </label>
                 </div>
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="eligibility-tell-us-once" onclick="setLocation(this);">
+                  <input class="nhsuk-radios__input" id="#" name="example" type="radio">
                   <label class="nhsuk-label nhsuk-radios__label" for="#">
                     Not sure
                   </label>
@@ -77,9 +74,10 @@
               </div>
           </fieldset>
           
-          <button class="nhsuk-button" type="submit">
-            Continue
-          </button>
+          {{ button({
+            "href": "eligibility-tell-us-once",
+            "text": "Continue"
+            }) }} 
       </div>
 
 

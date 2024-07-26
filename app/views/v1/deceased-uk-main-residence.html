@@ -33,7 +33,7 @@
   }) }}
 
 
-        <form method=“post”>
+        <form action="deceased-uk-main-residence" method="post">
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -50,17 +50,17 @@
               <div class="nhsuk-radios">
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="deceased-postcode-lookup" onclick="setLocation(this);">
-                  <label class="nhsuk-label nhsuk-radios__label" for="eligibility-contact-employer">
+                  <input class="nhsuk-radios__input" id="top" name="uk" type="radio"
+                  value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="top">
                    Yes
                   </label>
                 </div>
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="deceased-international-address" onclick="setLocation(this);">
-                  <label class="nhsuk-label nhsuk-radios__label" for="confirmation-time-36">
+                  <input class="nhsuk-radios__input" id="bottom" name="uk" type="radio"
+                    value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="bottom">
                     No
                   </label>
                 </div>
@@ -83,10 +83,7 @@
   </div>
 </div>
 
-<script>
-  function setLocation(element) {
-    document.forms[0].action = element.value
-  }
-</script>
+
+
 {% endblock %}
 

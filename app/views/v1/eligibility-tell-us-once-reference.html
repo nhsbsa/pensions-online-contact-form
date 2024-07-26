@@ -49,8 +49,7 @@
               <div class="nhsuk-radios nhsuk-radios--conditional">
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="informant-name" aria-controls="conditional-contact-1" aria-expanded="false"
-                  value="informant-name" onclick="setLocation(this);">
+                  <input class="nhsuk-radios__input" id="contact-1" name="reference" type="radio" value="informant-name" aria-controls="conditional-contact-1" aria-expanded="false">
                   <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
                     Yes
                   </label>
@@ -62,14 +61,13 @@
                     <label class="nhsuk-label" for="TUOREF">
                       Tell Us Once reference number
                     </label>
-                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="number" name="number" type="text">
+                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="number" name="reference" type="text">
                   </div>
           
                 </div>
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="informant-name" onclick="setLocation(this);">
+                  <input class="nhsuk-radios__input" id="#" name="reference" type="radio">
                   <label class="nhsuk-label nhsuk-radios__label" for="#">
                     No
                   </label>
@@ -79,14 +77,10 @@
             </fieldset>
 
           </div>
-          <button class="nhsuk-button" type="submit">
-            Continue
-          </button>
+          {{ button({
+            "href": "informant-name",
+            "text": "Continue"
+            }) }} 
 
-<script>
-  function setLocation(element) {
-    document.forms[0].action = element.value
-  }
-</script>
 {% endblock %}
 

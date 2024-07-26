@@ -33,7 +33,7 @@
 }) }}
 
 
-        <form method=“post”>
+      
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -47,7 +47,7 @@
 
     </span>
 
-      <form action="deceased-address-select" method="post">
+      <form action="deceased-postcode-lookup" method="post">
 
         <p>For example, AB1 2CD</p>
 
@@ -55,7 +55,7 @@
             <label class="nhsuk-label" for="input-width-10">
               Postcode 
             </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" type="text">
+            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="enter" type="text">
           </div>
           
           <p class="nhsuk-body"><a href="deceased-full-address">
@@ -64,11 +64,10 @@
          
 
 
-          <div class="nhsuk-form-group">
-            {{ button({
-              "href": "deceased-address-select",
-              "text": "Find address"
-              }) }} 
+          
+            <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+              Find address
+            </button>
 
             </div>
 
@@ -81,9 +80,5 @@
   </div>
 
 
-  <script>
-    function setLocation(element) {
-            document.forms[0].action = element.value
-    }
-  </script>
+ 
 {% endblock %}

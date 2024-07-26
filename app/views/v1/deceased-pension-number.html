@@ -57,8 +57,7 @@
               <div class="nhsuk-radios nhsuk-radios--conditional">
           
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="deceased-date-of-birth" aria-controls="conditional-contact-1" aria-expanded="false"
-                  value="SDNUMBER" onclick="setLocation(this);">
+                  <input class="nhsuk-radios__input" id="contact-1" name="number" type="radio" value="deceased-date-of-birth" aria-controls="conditional-contact-1" aria-expanded="false">
                   <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
                     Yes
                   </label>
@@ -76,8 +75,7 @@
                 </div>
 
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="deceased-date-of-birth" onclick="setLocation(this);">
+                  <input class="nhsuk-radios__input" id="#" name="number" type="radio">
                   <label class="nhsuk-label nhsuk-radios__label" for="#">
                     No
                   </label>
@@ -86,9 +84,10 @@
               </div>
           </fieldset>
           
-          <button class="nhsuk-button" type="submit">
-            Continue
-          </button>
+          {{ button({
+            "href": "deceased-date-of-birth",
+            "text": "Continue"
+            }) }} 
       </div>
 
 

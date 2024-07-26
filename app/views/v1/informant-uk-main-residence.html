@@ -32,45 +32,39 @@
     "text": "Go back"
   }) }}
 
+  <form action="informant-uk-main-residence" method="post">
+  <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
 
-        <form method=“post”>
+          <div class="nhsuk-form-group">
 
-          <fieldset class="nhsuk-fieldset">
-            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-              <h1 class="nhsuk-fieldset__heading">
-                <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
-                Is your main residence in the UK?
-              </h1>
-              
-            </legend>
-            <p>If your main residence is outside of the UK, select no.</p>
-             
-
-            <div class="nhsuk-form-group">
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Is your main residence in the UK?
+                </h1>
+              </legend>
+              <p>If your main address is outside the UK, select no.</p>
+          
               <div class="nhsuk-radios">
-
-               
-
+          
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="informant-postcode-lookup" onclick="setLocation(this);">
-                  <label class="nhsuk-label nhsuk-radios__label" for="eligibility-contact-employer">
-                   Yes
+                  <input class="nhsuk-radios__input" id="example-1" name="main" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                    Yes
                   </label>
                 </div>
-
+          
                 <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                    value="informant-international-address" onclick="setLocation(this);">
-                  <label class="nhsuk-label nhsuk-radios__label" for="confirmation-time-36">
+                  <input class="nhsuk-radios__input" id="example-1" name="main" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-1">
                     No
                   </label>
                 </div>
-
-                
-
+          
               </div>
-          </fieldset>
+            </fieldset>
+          
+          </div>
           
           <button class="nhsuk-button" type="submit">
             Continue
@@ -85,10 +79,7 @@
   </div>
 </div>
 
-<script>
-  function setLocation(element) {
-    document.forms[0].action = element.value
-  }
-</script>
+
+
 {% endblock %}
 

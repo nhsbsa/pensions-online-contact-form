@@ -35,7 +35,7 @@
 
     <div class="nhsuk-grid-column-full">
 
-      <form action="deceased-dependants" method="post">
+      <form action="deceased-dependants-confirm" method="post">
 
       <!-- Change the page heading -->
 
@@ -85,9 +85,10 @@
       
       </div>
 
-      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-        Continue
-      </button>
+      {{ button({
+        "href": "deceased-dependants-confirm",
+        "text": "Continue"
+        }) }} 
 
       <!-- End of content -->
     </form>

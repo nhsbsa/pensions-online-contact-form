@@ -15,18 +15,112 @@ router.post(/start/, (req, res) => {
     res.redirect('date-of-birth')
 });
 
-// Did the deceased have any dependents page
-router.post('/deceased-dependents-edit', (req, res) => {
 
-    const contact = req.session.data['dependentPage']
+//informant-postcode-no-result
+router.post('/informant-postcode-no-result/', (req, res) => {
 
-    if (contact == 'yes') {
-        res.redirect('deceased-dependents-list')
+    const contract = req.session.data['noAddress']
+
+    if (contract == 'change') {
+        res.redirect('informant-postcode-lookup')
     } else {
-        res.redirect('deceased-date-of-birth')
+        res.redirect('informant-full-address')
 
     }
 });
+
+//informant-postcode-lookup
+router.post('/informant-postcode-lookup', (req, res) => {
+
+    let postcode = req.session.data['enterPostcode']
+
+    if (postcode == 'ABC 123') {
+        res.redirect('informant-postcode-no-result')
+    } else {
+        res.redirect('informant-address-select')
+
+    }
+});
+
+//eligibility-active-employment page
+router.post('/eligibility-active-employment', (req, res) => {
+
+    const contract = req.session.data['employment']
+
+    if (contract == 'yes') {
+        res.redirect('eligibility-contact-employer')
+    } else {
+        res.redirect('eligibility-recieving-pension')
+
+    }
+});
+
+//eligibility-tell-us-once page
+router.post('/eligibility-tell-us-once', (req, res) => {
+
+    const contract = req.session.data['tellOnce']
+
+    if (contract == 'yes') {
+        res.redirect('eligibility-tell-us-once-reference')
+    } else {
+        res.redirect('informant-name')
+
+    }
+});
+
+//informant-uk-main-residence page
+router.post('/informant-uk-main-residence', (req, res) => {
+
+    const select = req.session.data['main']
+
+    if (select == 'yes') {
+        res.redirect('informant-postcode-lookup')
+    } else {
+        res.redirect('informant-international-address')
+
+    }
+});
+
+//deceased-dependants-confirm page (NEEDS WORKED ON AS ITS NOT FUNCTIONING CORRECTLY)
+router.post('/deceased-dependants-confirm', (req, res) => {
+
+    const contract = req.session.data['dependents']
+
+    if (contract == 'yes') {
+        res.redirect('deceased-dependants-list')
+    } else {
+        res.redirect('deceased-uk-main-residence')
+
+    }
+});
+
+//deceased-uk-main-residence page
+router.post('/deceased-uk-main-residence', (req, res) => {
+
+    const check = req.session.data['uk']
+
+    if (check == 'yes') {
+        res.redirect('deceased-postcode-lookup')
+    } else {
+        res.redirect('deceased-international-address')
+
+    }
+});
+
+//deceased-postcode-lookup
+router.post('/deceased-postcode-lookup', (req, res) => {
+
+    let postcode = req.session.data['enter']
+
+    if (postcode == 'ABC 123') {
+        res.redirect('deceased-postcode-no-result')
+    } else {
+        res.redirect('deceased-address-select')
+
+    }
+});
+
+
 
 
 module.exports = router;

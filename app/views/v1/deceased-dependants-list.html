@@ -1,0 +1,140 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+        <form action="deceased-dependants-list" method=“post”>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Deceased pension member details</span>
+                Who are the dependants of the deceased?</h1>
+            </legend>
+
+             <p class="nhsuk-body">There can be multiple dependents. Each dependent has been </p>
+             <details class="nhsuk-details">
+              <summary class="nhsuk-details__summary">
+                <span class="nhsuk-details__summary-text">
+                  More information on dependent's pensions
+                </span>
+              </summary>
+              <div class="nhsuk-details__text">
+                <h3>Adult dependent</h3>
+                <p>Brief description of adult dependents to go here.</p>
+                <ul>
+                  <li>Spouse</li>
+                  <li>Civil partners</li>
+                  <li>Qualifying scheme partner</li>
+                </ul>
+                <h3>Child dependent</h3>
+                <p>Brief description of child dependents to go here.</p>
+                <ul>
+                  <li>Child</li>
+                  <li>Step children</li>
+                  <li>Brother</li>
+                </ul>
+                <h3>Other nomination</h3>
+                <p>Brief description of other nominations to go here.</p>
+                <ul>
+                  <li>Child</li>
+                  <li>Step children</li>
+                  <li>Brother</li>
+                </ul>
+
+                
+            
+              </div>
+            </details>
+
+               <form>
+
+                <div class="nhsuk-form-group">
+              
+                  <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+                   
+              
+                    <div class="nhsuk-hint" id="contact-hint">
+                      Select all options that are relevant.
+                    </div>
+              
+                    <div class="nhsuk-checkboxes">
+              
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact">
+                          Adult dependent
+                        </label>
+                      </div>
+              
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-2">
+                          Child dependent
+                        </label>
+                      </div>
+              
+                      <div class="nhsuk-checkboxes__item">
+                        <input class="nhsuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="contact-3">
+                          Other nomination
+                        </label>
+                      </div>
+              
+                    </div>
+                  </fieldset>
+              
+                </div>
+              
+              </form>
+        
+
+        
+          
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Continue
+        </button>
+      </fieldset>
+    </form>
+      </div>
+    </div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

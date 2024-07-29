@@ -81,7 +81,7 @@ router.post('/informant-uk-main-residence', (req, res) => {
     }
 });
 
-//deceased-dependants-confirm page (NEEDS WORKED ON AS ITS NOT FUNCTIONING CORRECTLY)
+//deceased-dependants-confirm page
 router.post('/deceased-dependants-confirm', (req, res) => {
 
     const contract = req.session.data['dependents']

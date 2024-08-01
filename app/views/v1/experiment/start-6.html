@@ -1,0 +1,89 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+       
+            
+    
+
+        
+
+          <h1 class="nhsuk-heading-l">
+        
+          
+            Letting us know a NHS pension member has died
+          </h1>
+
+    <p>Use this service to let us know a pension member has died. </p>
+
+    <div class="nhsuk-inset-text">
+      <span class="nhsuk-u-visually-hidden">Information: </span>
+    <h3> If the deceased member was still an active employee</h3>
+      <p>If the deceased was working in pensionable NHS employment, contact their last employer to arrange the correct forms.</p>
+    </div>
+
+
+
+<h3>Before you start</h3>
+
+<p>We will need to know your:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+    
+            <li>personal details</li>
+            <li>contact details</li>
+            <li>relationship to the deceased member</li>
+           
+        </ul>
+
+<p>It will also help us match our records if you can tell us the deceased member’s:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>personal details</li>
+            <li>dependants</li>
+             <li>main residence</li>
+            <li>pension details</li>
+           
+            
+        </ul>
+
+        <p>We will send you an email to confirm we have your notification.</p>
+              
+                {{ button({
+                    "href": "eligibility-active-employment",
+                    "text": "Start"
+                    }) }} 
+                    
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

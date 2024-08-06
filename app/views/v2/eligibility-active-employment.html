@@ -1,0 +1,88 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+  <form action="eligibility-active-employment" method="post">
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know a NHS pension member has died</span>
+                Was the deceased member still in active employment?
+              </h1>
+            </legend>
+            
+             
+
+            <div class="nhsuk-form-group">
+              <div class="nhsuk-radios">
+
+               
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="eligibility-contact-employer" name="employment" type="radio"
+                    value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="eligibility-contact-employer">
+                   Yes
+                  </label>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="your-interview-slots" name="employment" type="radio"
+                    value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="confirmation-time-36">
+                    No
+                  </label>
+                </div>
+
+                
+
+              </div>
+          </fieldset>
+          
+          <button class="nhsuk-button" type="submit">
+            Continue
+          </button>
+      </div>
+
+
+    </div>
+   
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+

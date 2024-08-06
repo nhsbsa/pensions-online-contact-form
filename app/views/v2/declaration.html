@@ -1,0 +1,101 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+       
+          <form action="confirmation" method="post">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                What you need to know
+              </h1>
+            </legend>
+            
+             <p>We'll contact you as soon as possible once we receive your form.</p>
+
+             <p>All of your information will be handled by the NHS Business Services Authority (NHSBSA).</p>
+
+             <p>When we contact you, we may need:</p>
+             <ul class="nhsuk-list nhsuk-list--bullet">
+                    <li>more details about the deceased</li>
+                    <li>information on who is managing the estate</li>
+                    <li>a certified death certificate</li>
+                        
+                </ul>
+
+
+
+
+          </fieldset>
+          
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Declaration
+              </h1>
+            </legend>
+
+          </fieldset>
+<div class="nhsuk-checkboxes">
+
+  <div class="nhsuk-checkboxes__item">
+    <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="declaration">
+    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+      I agree that all the information given is true and accurate to the best of my knowledge, and agree to be contacted about the deceased by NHS Pensions.
+    </label>
+  </div>
+</br>
+          <div>          
+            <button class="nhsuk-button" type="submit">
+            Submit
+          </button>
+        </div>
+
+      </div>
+
+
+    </div>
+   
+
+    </form>
+  </div>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

@@ -1,0 +1,94 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+
+<div>
+  <form action="deceased-postcode-no-result" method="post">
+  <fieldset class="nhsuk-fieldset">
+    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <h1 class="nhsuk-fieldset__heading">
+        <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+        We cannot find the address for the postcode ABC 123
+      </h1>
+      
+
+<span class="nhsuk-hint">
+
+</span>
+</legend>
+
+<p>You can select from one of the options below.</p>
+
+
+<div class="nhsuk-form-group">
+
+<fieldset class="nhsuk-fieldset">
+
+
+<div class="nhsuk-radios">
+
+  <div class="nhsuk-radios__item">
+    <input class="nhsuk-radios__input" id="example-1" name="noAddress" type="radio" value="change">
+    <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+      Change the postcode
+    </label>
+  </div>
+
+  <div class="nhsuk-radios__item">
+    <input class="nhsuk-radios__input" id="example-2" name="noAddress" type="radio" value="enter">
+    <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+      Enter the address manually
+    </label>
+  </div>
+
+</div>
+</fieldset>
+
+</div>
+
+
+<button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+Continue
+</button>
+  </form>
+  </div>
+
+
+
+<script>
+function setLocation(element) {
+    document.forms[0].action = element.value
+}
+</script>
+{% endblock %}

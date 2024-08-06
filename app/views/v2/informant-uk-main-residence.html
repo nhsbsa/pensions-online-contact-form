@@ -1,0 +1,85 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+  <form action="informant-uk-main-residence" method="post">
+  <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Is your main residence in the UK?
+                </h1>
+              </legend>
+              <p>If your main address is outside the UK, select no.</p>
+          
+              <div class="nhsuk-radios">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-1" name="main" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                    Yes
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-1" name="main" type="radio" value="no">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                    No
+                  </label>
+                </div>
+          
+              </div>
+            </fieldset>
+          
+          </div>
+          
+          <button class="nhsuk-button" type="submit">
+            Continue
+          </button>
+      </div>
+
+
+    </div>
+   
+
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}
+

@@ -1,0 +1,84 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+ 
+ 
+ {{ backLink({
+    "href": "informant-name",
+    "text": "Go back"
+  }) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <form action="informant-email-address" method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+            <h1 class="nhsuk-fieldset__heading">
+              What is your relationship to the deceased?</h1>
+          </legend>
+
+        <p>This information will help us as we handle the deceased members benefits.</p>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="relationship">
+              Relationship
+            </label>
+            <select class="nhsuk-select nhsuk-u-width-one-half" id="one-half" name="one-half">
+              <option value="0"></option>
+              <option value="1">Spouse</option>
+              <option value="2">Father </option>
+              <option value="3">Mother</option>
+              <option value="4">Partner</option>
+              <option value="5">Daughter</option>
+              <option value="6">Son</option>
+            
+            </select>
+          </div>
+          
+        </fieldset>
+      
+      </div>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}

@@ -1,0 +1,88 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+        <span class="nhsuk-heading-l">What is your full address?</span>
+      </h1>
+      <p>If you have these details, we will need:</p>
+      <ul>
+        <li>the first line of the address, usually a building name or street</li>
+        <li>the town or city</li>
+        <li>the country of province</li>
+        <li>the postal or zip code</li>
+      </ul>
+
+
+
+
+      <span class="nhsuk-hint">
+
+    </span>
+
+      <form action="informant-check-your-answers" method="post">
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="example">
+            Full address
+          </label>
+          <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
+        </div>
+
+            </div>
+
+</div>
+
+
+        <div class="nhsuk-form-group">
+          <button class="nhsuk-button" type="submit">
+            Continue
+          </button>
+
+          </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    function setLocation(element) {
+            document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

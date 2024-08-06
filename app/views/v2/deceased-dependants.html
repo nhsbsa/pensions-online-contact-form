@@ -1,0 +1,128 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+        <form method=“post”>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Deceased pension member details</span>
+                Did the deceased have any dependants?</h1>
+            </legend>
+
+             <p class="nhsuk-body">The NHS pension schemes give lump sum and pension benefits to eligible dependants.</p>
+
+               <p>This can either be:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>an adult dependent like a spouse, civil partner or scheme partner</li>
+            <li>a child dependant</li>
+            <li>any other nomination</li>
+                
+        </ul>
+            <div class="nhsuk-form-group">
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="deceased-uk-main-residence" aria-controls="conditional-contact-1" aria-expanded="false"
+                  value="dependant-yes" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                    Yes
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+          
+                  <div class="nhsuk-hint" id="example-hint">
+                    Select all options that are relevant to you.
+                  </div>
+            
+                  <div class="nhsuk-checkboxes">
+            
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="adult-dependant">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                        There is an adult dependant
+                      </label>
+                    </div>
+            
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="child-dependant">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                        There is a child dependant
+                      </label>
+                    </div>
+            
+                    <div class="nhsuk-checkboxes__item">
+                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="nomination">
+                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        There is another nomination
+                      </label>
+                    </div>
+          
+                </div>
+
+
+                
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="#" name="example" type="radio"
+                  value="deceased-uk-main-residence" onclick="setLocation(this);">
+                <label class="nhsuk-label nhsuk-radios__label" for="#">
+                  No
+                </label>
+              </div>
+          </fieldset>
+          
+          <button class="nhsuk-button" type="submit">
+            Continue
+          </button>
+      </div>
+
+
+    </div>
+   
+
+    </form>
+  </div>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

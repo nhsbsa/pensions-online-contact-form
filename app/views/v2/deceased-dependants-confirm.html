@@ -1,0 +1,103 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+  <div class="nhsuk-grid-row">
+
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          <span class="nhsuk-caption-l nhsuk-caption--bottom">Deceased pension member details</span>
+          Did the deceased have any dependants?</h1>
+      </legend>
+    
+
+     <p class="nhsuk-body">The NHS pension schemes give lump sum and pension benefits to eligible dependants.</p>
+
+       <p>This can either be:</p>
+<ul class="nhsuk-list nhsuk-list--bullet">
+    <li>an adult dependent like a spouse, civil partner or scheme partner</li>
+    <li>a child dependant</li>
+    <li>any other nomination</li>
+        
+</ul>
+      <form action="deceased-dependants-confirm" method="post">
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <div class="nhsuk-radios">
+              
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="yes" name="dependents" type="radio"
+                value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                  Yes
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="no" name="dependents" type="radio"
+                value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                  No
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="notSure" name="dependents" type="radio"
+                value="notSure">
+                <label class="nhsuk-label nhsuk-radios__label" for="example-3">
+                  Not sure
+                </label>
+                <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-2-item-hint">
+                  You can find more information about dependents on the <a href="">Survivors Guide (opens in a new tab)</a>.</aref>
+                </div>
+              </div>
+        
+            </div>
+          </fieldset>
+        </div>
+
+          
+        <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Continue
+        </button> 
+    </form>
+      </div>
+    </div>
+
+
+
+{% endblock %}
+

@@ -1,0 +1,84 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+ 
+ 
+ {{ backLink({
+    "href": "informant-relationship",
+    "text": "Go back"
+  }) }}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="informant-telephone-number" method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+            <h1 class="nhsuk-fieldset__heading">
+              What is your email address?</h1>
+          </legend>
+
+        <p>Giving us an email address will help us update you quickly once we've received your form.</p>
+        
+          
+
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="two-thirds">
+              Email address
+            </label>
+            <input class="nhsuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+          </div>
+
+          <div class="nhsuk-inset-text" style="overflow:hidden;" id="validEmail">
+            <span class="nhsuk-hint nhsuk-!-margin-bottom-0">
+                An email will be sent to: &nbsp;<span class="nhsuk-body email-feedback" id="email-show" style="font-weight:800"></span>
+            </span>
+        </div>
+        </fieldset>
+      
+      </div>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+  </div>  
+</div>  
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+</br>
+
+
+ 
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+        <form method=“post”>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Deceased pension member details</span>
+                Do you know the NHS pension number of the deceased?</h1>
+            </legend>
+
+             <p class="nhsuk-body">Sometimes known as the Superannuation Division (SD) number. This will help us find their record and support you quicker.</p>
+
+              <p>The number starts with SD, followed by 8 digits. For example, SD12345678.</p>
+
+               <p>Find this on:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>some payslips</li>
+            <li>an online Total Reward Statement or Annual Benefits Statement</li>
+            <li>some communications we've sent to the deceased</li>
+                
+        </ul>
+            <div class="nhsuk-form-group">
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="contact-1" name="number" type="radio" value="deceased-date-of-birth" aria-controls="conditional-contact-1" aria-expanded="false">
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                    Yes
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+          
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="SDNUMBER">
+                      SD Number
+                    </label>
+                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="number" name="number" type="text">
+                  </div>
+          
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="#" name="number" type="radio">
+                  <label class="nhsuk-label nhsuk-radios__label" for="#">
+                    No
+                  </label>
+                </div>
+                
+              </div>
+          </fieldset>
+          
+          {{ button({
+            "href": "deceased-date-of-birth",
+            "text": "Continue"
+            }) }} 
+      </div>
+
+
+    </div>
+   
+
+    </form>
+  </div>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

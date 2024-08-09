@@ -40,11 +40,19 @@
             <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                 <span class="nhsuk-caption-l nhsuk-caption--bottom">Letting us know a NHS pension member has died</span>
-                Do you know the Tell Us Once service reference number?</h1>
+                Have you used the 'Tell Us Once' service to notify about this bereavement?</h1>
               </legend>
-          <p>If you've used the Tell Us Once service, you may have a unique reference number.</p>
+          <p>Tell Us Once is a service that lets you report a bereavement to most government organisations in one go.</p>
 
-          <p>You do not need to notify us of the death of the deceased member if you have used the Tell Us Once service. But you can still complete this form to let us know.</p>
+          <p>A registrar will explain the service when you register the death of the deceased.</p>
+
+          <p>They'll either:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+
+            <li>complete the Tell Us Once service with you</li>
+            <li>give you a unique reference number so you can use the service yourself online or by phone</li>
+                
+        </ul>
              
               <div class="nhsuk-radios nhsuk-radios--conditional">
           
@@ -73,12 +81,19 @@
                   </label>
                 </div>
 
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="#" name="reference" type="radio">
+                  <label class="nhsuk-label nhsuk-radios__label" for="#">
+                    Not sure
+                  </label>
+                </div>
+
               </div>
             </fieldset>
 
           </div>
           {{ button({
-            "href": "informant-name",
+            "href": "deceased-pension-number",
             "text": "Continue"
             }) }} 
 

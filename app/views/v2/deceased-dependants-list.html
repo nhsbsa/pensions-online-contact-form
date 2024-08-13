@@ -84,20 +84,47 @@
                         Adult dependant
                       </label>
                     </div>
-            
-                    <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-1">
-            
-                      <div class="nhsuk-form-group">
-                        <label class="nhsuk-label" for="email">
-                          Enter the dependant relationship to the deceased (optional)
-                        </label>
-                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
-                      </div>
-                     
-                        <div><a href="deceased-dependants-list-add">List another adult dependant</a></div>
+            <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="conditional-contact-1">
                       
-            
+                  
+                      <div class="nhsuk-form-group" id="text-fields-container">
+                        <label class="nhsuk-label" for="relationship-1">
+                            Enter the dependant relationship to the deceased
+                        </label>
+                        <input class="nhsuk-input nhsuk-u-width-two-thirds" id="relationship-1" name="relationship[]" type="text">
                     </div>
+                
+                    <a href="#" id="add-field">List another adult dependant</a>
+                
+                    <script>
+                        let fieldCounter = 2; // Start from 2 since the first input has id 'relationship-1'
+                        
+                        document.getElementById('add-field').addEventListener('click', function(event) {
+                            event.preventDefault(); // Prevent default link behavior
+                
+                            const container = document.getElementById('text-fields-container');
+                
+                            // Create new label
+                            const newLabel = document.createElement('label');
+                            newLabel.className = 'nhsuk-label';
+                            newLabel.setAttribute('for', 'relationship-' + fieldCounter);
+                            newLabel.textContent = 'Enter the dependant relationship to the deceased';
+                
+                            // Create new input field
+                            const newInput = document.createElement('input');
+                            newInput.className = 'nhsuk-input nhsuk-u-width-two-thirds';
+                            newInput.id = 'relationship-' + fieldCounter;
+                            newInput.name = 'relationship[]';
+                            newInput.type = 'text';
+                
+                            // Append new label and input to the container
+                            container.appendChild(newLabel);
+                            container.appendChild(newInput);
+                
+                            fieldCounter++; // Increment counter for the next input ID
+                        });
+                    </script>
+                  </div>
             
                     <div class="nhsuk-checkboxes__item">
                       <input class="nhsuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" aria-controls="conditional-contact-2" aria-expanded="false">

@@ -120,6 +120,20 @@ router.post('/deceased-postcode-lookup', (req, res) => {
     }
 });
 
+//informant-telephone-number page
+router.post('/informant-telephone-number', (req, res) => {
+
+    const check = req.session.data['contact']
+
+    if (check == 'yes') {
+        res.redirect('informant-preferred-contact')
+    } else {
+        res.redirect('informant-uk-main-residence')
+
+    }
+});
+
+
 
 
 

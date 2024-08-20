@@ -51,28 +51,67 @@
               What is your relationship to the deceased?</h1>
           </legend>
 
-        <p>This information will help us as we handle the deceased members benefits.</p>
-        
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="relationship">
-              Relationship
-            </label>
-            <select class="nhsuk-select nhsuk-u-width-one-half" id="one-half" name="one-half">
-              <option value="0"></option>
-              <option value="1">Spouse</option>
-              <option value="2">Civil Partner </option>
-              <option value="3">Child</option>
-              <option value="4">Scheme Partner</option>
-              <option value="5">Legal Personal Representative </option>
-              <option value="6">Informant</option>
-              <option value="7">Other</option>
-            
-            </select>
-          </div>
-          
-        </fieldset>
-      
+        <p>This information will help us as we handle the deceased member's benefits.</p>
+        <p>Select one option.</p>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+              <div class="nhsuk-radios">
+
+                  <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="spouse" name="example" type="radio" value="spouse">
+                      <label class="nhsuk-label nhsuk-radios__label" for="spouse">
+                          Child
+                      </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="civil-partner" name="example" type="radio" value="civil-partner">
+                      <label class="nhsuk-label nhsuk-radios__label" for="civil-partner">
+                          Civil Partner
+                      </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="child" name="example" type="radio" value="child">
+                      <label class="nhsuk-label nhsuk-radios__label" for="child">
+                          Legal personal representative
+                      </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="scheme-partner" name="example" type="radio" value="scheme-partner">
+                      <label class="nhsuk-label nhsuk-radios__label" for="scheme-partner">
+                          Scheme Partner
+                      </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="legal-rep" name="example" type="radio" value="legal-rep">
+                      <label class="nhsuk-label nhsuk-radios__label" for="legal-rep">
+                          Spouse
+                      </label>
+                  </div>
+
+                  <div class="nhsuk-radios__item nhsuk-radios--conditional">
+                      <input class="nhsuk-radios__input" id="other" name="example" type="radio" value="other" aria-controls="conditional-contact-1" aria-expanded="false">
+                      <label class="nhsuk-label nhsuk-radios__label" for="other">
+                          Other
+                      </label>
+                      <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+                          <div class="nhsuk-form-group">
+                              <label class="nhsuk-label" for="other-relationship">
+                                  Enter your relationship to the deceased
+                              </label>
+                              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="other-relationship" name="other-relationship" type="text">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </fieldset>
       </div>
+  </fieldset>
+</div>
       <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
         Continue
       </button>
@@ -82,4 +121,20 @@
     </div>  
 
   </div>
+
+  <script>
+    // JavaScript to toggle the "Other" input field
+    document.querySelectorAll('.nhsuk-radios__input').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const conditionalContent = document.getElementById('conditional-contact-1');
+            if (this.id === 'other') {
+                conditionalContent.classList.remove('nhsuk-radios__conditional--hidden');
+                this.setAttribute('aria-expanded', 'true');
+            } else {
+                conditionalContent.classList.add('nhsuk-radios__conditional--hidden');
+                document.getElementById('other').setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+</script>
 {% endblock %}

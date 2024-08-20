@@ -34,8 +34,6 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="informant-telephone-number" method="post">
-
       <!-- Change the page heading -->
 
 
@@ -66,9 +64,10 @@
         </fieldset>
       
       </div>
-      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
-        Continue
-      </button>
+      {{ button({
+        "href": "informant-telephone-number",
+        "text": "Continue"
+        }) }} 
 
       <!-- End of content -->
     </form>

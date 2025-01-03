@@ -1,60 +1,62 @@
-// Import NHS.UK frontend library
-@import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
-// Components that are not in the NHS.UK frontend library
-@import 'components/list-border';
-@import 'components/related-nav';
+  // Import NHS.UK frontend library
+  @import 'node_modules/nhsuk-frontend/packages/nhsuk';
 
-///////////////////////////////////////////
-// Add your custom CSS/Sass styles below...
-///////////////////////////////////////////
+  // Components that are not in the NHS.UK frontend library
+  @import 'components/list-border';
+  @import 'components/related-nav';
   
-@media (min-width: 40.0625em) {
-    .nhsuk-back-link {
-      padding-top: 24px; 
-    } 
+  ///////////////////////////////////////////
+  // Add your custom CSS/Sass styles below...
+  ///////////////////////////////////////////
+    
+  @media (min-width: 40.0625em) {
+      .nhsuk-back-link {
+        padding-top: 24px; 
+      } 
+    }
+  
+  // ************************************
+  // phase banner
+  // ************************************
+  
+      .beta-banner {
+    padding: 16px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dcdcdc;
   }
-
-// ************************************
-// phase banner
-// ************************************
- 
-.beta-banner {
-  padding: 16px 0;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dcdcdc;
-}
-    .status-box {
-  padding: 3px 5px 3px 5px;
-  background-color: #007f3b;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 20px;
-  line-height: 1.45455;
-  font-weight: bold;
-}
-.status-box.status-box-blue {
-  background-color: #005eb8;
-}
-
-.nhsuk-phase-banner {
-  padding-top: nhsuk-spacing(2);
-  padding-bottom: nhsuk-spacing(2);
-  border-bottom: 1px solid $nhsuk-border-color;
-}
-
-.nhsuk-phase-banner__content {
-  @include nhsuk-font(16);
-  color: $nhsuk-text-color;
-  display: table;
-  margin: 0;
-}
-
-.nhsuk-phase-banner__content__tag {
-  margin-right: 10px ;
-}
-
-.nhsuk-phase-banner__text {
-  display: table-cell;
-  vertical-align: middle;
-}
+      .status-box {
+    padding: 3px 5px 3px 5px;
+    background-color: #007f3b;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.45455;
+    font-weight: bold;
+  }
+  .status-box.status-box-blue {
+    background-color: #005eb8;
+  }
+  
+  .nhsuk-phase-banner {
+    padding-top: nhsuk-spacing(2);
+    padding-bottom: nhsuk-spacing(2);
+    border-bottom: 1px solid $nhsuk-border-color;
+  }
+  
+  .nhsuk-phase-banner__content {
+    @include nhsuk-font(16);
+    color: $nhsuk-text-color;
+    display: table;
+    margin: 0;
+  }
+  
+  .nhsuk-phase-banner__content__tag {
+    margin-right: 10px ;
+  }
+  
+  .nhsuk-phase-banner__text {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  

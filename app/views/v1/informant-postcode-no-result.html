@@ -14,23 +14,21 @@
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-
-
-
 {% endblock %}
 
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
-</br>
+{% endblock %}
 
-
- 
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
  
 {{ backLink({
-  "href": "javascript:history.go(-1)",
-  "text": "Go back"
-}) }}
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
 
 
 <div>

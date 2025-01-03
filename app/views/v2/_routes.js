@@ -6,7 +6,7 @@ const router = express.Router();
 // Add your routes here - above the module.exports line
 
 // ========================================================================
-// MAIN ONLINE CONTACT FORM JOURNEY
+// MAIN Bereavement Journey JOURNEY
 // ========================================================================
 
 
